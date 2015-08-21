@@ -23,17 +23,38 @@
                                     <action selector="sliderMoved:" destination="vXZ-lx-hvc" eventType="valueChanged" id="hVE-RZ-dxm"/>
                                 </connections>
                             </slider>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZiP-JD-ycg">
+                                <rect key="frame" x="0.0" y="74" width="320" height="494"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cel" id="CoT-KP-l1p">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CoT-KP-l1p" id="gG2-6T-MBJ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="chp-CG-hcq"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="cYc-gF-wce"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Z0C-5G-chs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="16" id="FnK-9h-qnr"/>
                             <constraint firstItem="Z0C-5G-chs" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="J49-OH-BKP"/>
+                            <constraint firstItem="ZiP-JD-ycg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="L6D-a7-9t5"/>
+                            <constraint firstItem="ZiP-JD-ycg" firstAttribute="top" secondItem="Z0C-5G-chs" secondAttribute="bottom" constant="8" id="XCH-yh-PeW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZiP-JD-ycg" secondAttribute="bottom" id="Xb8-RU-7Ok"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZiP-JD-ycg" secondAttribute="trailing" constant="-16" id="qPh-Ql-8qp"/>
                             <constraint firstItem="Z0C-5G-chs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="sV9-qH-qcA"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="sliderValue" destination="Z0C-5G-chs" id="9N7-mK-uN3"/>
+                        <outlet property="table" destination="ZiP-JD-ycg" id="cp8-Sn-4Uh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
